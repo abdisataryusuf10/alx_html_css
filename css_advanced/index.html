@@ -36,6 +36,7 @@
                 <ul class="nav-menu">
                     <li><a href="#what-we-do" class="nav-link">what we do</a></li>
                     <li><a href="#our-results" class="nav-link">our results</a></li>
+                    <li><a href="#videos" class="nav-link">videos</a></li>
                     <li><a href="#contact-us" class="nav-link">contact us</a></li>
                 </ul>
             </nav>
@@ -100,89 +101,115 @@
             </div>
         </section>
 
-        <!-- Quotes/Testimonials Section -->
-        <section class="quotes section-padding">
+        <!-- Videos Section -->
+        <section id="videos" class="videos section-padding">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">What our customers say</h2>
-                    <p class="section-subtitle">Don't just take our word for it - hear from some of our satisfied customers</p>
+                    <h2 class="section-title">Featured Videos</h2>
+                    <p class="section-subtitle">Watch our latest product reviews, tutorials, and customer stories</p>
                 </div>
 
-                <div class="quotes-grid">
-                    <!-- Quote Card 1 -->
-                    <div class="quote-card">
-                        <div class="quote-icon">🎵</div>
-                        <blockquote class="quote-text">
-                            The sound quality is absolutely incredible. I've never heard music like this before.
-                        </blockquote>
-                        <div class="quote-author">
-                            <img src="images/avatar1.jpg" alt="Sarah Johnson" class="author-avatar">
-                            <div class="author-info">
-                                <div class="author-name">Sarah Johnson</div>
-                                <div class="author-title">Music Producer</div>
+                <!-- Videos Filter -->
+                <div class="videos-filter">
+                    <button class="filter-btn active" data-filter="all">All Videos</button>
+                    <button class="filter-btn" data-filter="reviews">Product Reviews</button>
+                    <button class="filter-btn" data-filter="tutorials">Tutorials</button>
+                    <button class="filter-btn" data-filter="stories">Customer Stories</button>
+                </div>
+
+                <!-- Videos Grid -->
+                <div class="videos-grid">
+                    <!-- Video 1 -->
+                    <div class="video-card" data-category="reviews">
+                        <div class="video-thumbnail">
+                            <img src="images/video-thumb-1.jpg" alt="Headphones Review">
+                            <div class="video-play-button"></div>
+                            <span class="video-duration">12:34</span>
+                        </div>
+                        <div class="video-content">
+                            <h3 class="video-title">Premium Headphones X1 - In-depth Review</h3>
+                            <div class="video-author">
+                                <img src="images/avatar-tech.jpg" alt="Tech Expert" class="author-avatar">
+                                <span class="author-name">AudioTech Reviews</span>
+                            </div>
+                            <div class="video-meta">
+                                <span class="video-views">24K views</span>
+                                <span class="video-date">2 weeks ago</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Quote Card 2 -->
-                    <div class="quote-card">
-                        <div class="quote-icon">🌟</div>
-                        <blockquote class="quote-text">
-                            Comfort and quality combined. I can wear these for hours without any discomfort.
-                        </blockquote>
-                        <div class="quote-author">
-                            <img src="images/avatar2.jpg" alt="Mike Chen" class="author-avatar">
-                            <div class="author-info">
-                                <div class="author-name">Mike Chen</div>
-                                <div class="author-title">Audio Engineer</div>
+                    <!-- Video 2 -->
+                    <div class="video-card" data-category="tutorials">
+                        <div class="video-thumbnail">
+                            <img src="images/video-thumb-2.jpg" alt="Setup Tutorial">
+                            <div class="video-play-button"></div>
+                            <span class="video-duration">8:45</span>
+                        </div>
+                        <div class="video-content">
+                            <h3 class="video-title">How to Setup Your New Headphones for Optimal Sound</h3>
+                            <div class="video-author">
+                                <img src="images/avatar-expert.jpg" alt="Audio Expert" class="author-avatar">
+                                <span class="author-name">SoundMaster Pro</span>
+                            </div>
+                            <div class="video-meta">
+                                <span class="video-views">18K views</span>
+                                <span class="video-date">1 month ago</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Quote Card 3 -->
-                    <div class="quote-card">
-                        <div class="quote-icon">💫</div>
-                        <blockquote class="quote-text">
-                            Best investment I've made for my home studio. The noise cancellation is phenomenal.
-                        </blockquote>
-                        <div class="quote-author">
-                            <img src="images/avatar3.jpg" alt="Emma Davis" class="author-avatar">
-                            <div class="author-info">
-                                <div class="author-name">Emma Davis</div>
-                                <div class="author-title">Podcast Host</div>
+                    <!-- Video 3 -->
+                    <div class="video-card" data-category="stories">
+                        <div class="video-thumbnail">
+                            <img src="images/video-thumb-3.jpg" alt="Customer Story">
+                            <div class="video-play-button"></div>
+                            <span class="video-duration">15:22</span>
+                        </div>
+                        <div class="video-content">
+                            <h3 class="video-title">From Studio to Stage: A Musician's Journey</h3>
+                            <div class="video-author">
+                                <img src="images/avatar-musician.jpg" alt="Professional Musician" class="author-avatar">
+                                <span class="author-name">Sarah Johnson</span>
+                            </div>
+                            <div class="video-meta">
+                                <span class="video-views">32K views</span>
+                                <span class="video-date">3 weeks ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+                    <div class="video-card" data-category="reviews">
+                        <div class="video-thumbnail">
+                            <img src="images/video-thumb-4.jpg" alt="Comparison Review">
+                            <div class="video-play-button"></div>
+                            <span class="video-duration">20:15</span>
+                        </div>
+                        <div class="video-content">
+                            <h3 class="video-title">Wireless vs Wired: Which is Better for Audiophiles?</h3>
+                            <div class="video-author">
+                                <img src="images/avatar-audiophile.jpg" alt="Audiophile Expert" class="author-avatar">
+                                <span class="author-name">TrueSound Analysis</span>
+                            </div>
+                            <div class="video-meta">
+                                <span class="video-views">45K views</span>
+                                <span class="video-date">2 months ago</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Alternative testimonial style -->
-                <div class="testimonial-card mb-xl">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">
-                            "I've tried many headphones over the years, but none compare to the clarity and depth 
-                            of sound these provide. The build quality is exceptional, and the customer service 
-                            team was incredibly helpful when I had questions about the features."
-                        </p>
-                        <div class="testimonial-author">
-                            <img src="images/avatar4.jpg" alt="David Wilson" class="author-avatar">
-                            <div class="author-info">
-                                <div class="author-name">David Wilson</div>
-                                <div class="author-title">Professional Musician</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Simple quote style -->
-                <div class="simple-quote">
-                    <div class="quote-mark">"</div>
-                    <blockquote class="quote-content">
-                        Exceptional sound quality meets unparalleled comfort. These headphones have completely 
-                        transformed my listening experience, whether I'm working, traveling, or just relaxing at home.
-                    </blockquote>
-                    <div class="quote-source">- Audio Magazine Review</div>
+                <!-- Alternative List Layout -->
+                <div class="videos-list" style="display: none;">
+                    <!-- List items would go here -->
                 </div>
             </div>
+        </section>
+
+        <!-- Quotes Section -->
+        <section class="quotes section-padding">
+            <!-- Existing quotes content -->
         </section>
 
         <!-- Contact Us Section -->
@@ -192,10 +219,22 @@
                     <h2 class="section-title">Contact us</h2>
                     <p class="section-subtitle">Get in touch with our team</p>
                 </div>
-                <!-- Contact form will be added later -->
             </div>
         </section>
     </main>
+
+    <!-- Video Modal -->
+    <div class="video-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close video">×</button>
+            <div class="modal-video">
+                <!-- Video player would be embedded here -->
+                <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#000;color:#fff;">
+                    Video Player Placeholder
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- JavaScript -->
     <script>
@@ -229,6 +268,50 @@
                 } else {
                     header.classList.remove('scrolled');
                 }
+            });
+
+            // Video modal functionality
+            const videoCards = document.querySelectorAll('.video-card');
+            const videoModal = document.querySelector('.video-modal');
+            const modalClose = document.querySelector('.modal-close');
+
+            videoCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    videoModal.classList.add('active');
+                });
+            });
+
+            modalClose.addEventListener('click', function() {
+                videoModal.classList.remove('active');
+            });
+
+            videoModal.addEventListener('click', function(e) {
+                if (e.target === videoModal) {
+                    videoModal.classList.remove('active');
+                }
+            });
+
+            // Video filter functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const videoItems = document.querySelectorAll('.video-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    videoItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
             });
         });
     </script>
