@@ -3,41 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Basic HTML Page</title>
+    <title>My Unique Website</title>
     <link href="base.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
 <body class="works_on_smartphone">
     <header>
         <ul>
+            <li class="logo">&#127760;</li> <!-- Globe emoji as logo -->
             <li><a href="index.html">Home</a></li>
             <li><a href="tweets.html">Tweets</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </header>
     
     <main>
         <article>
-            <h1>Welcome to My Website</h1>
-            <p>This is a basic HTML page with some styling.</p>
+            <div class="article-header">
+                <h1>Welcome to My Unique Website</h1>
+                <div class="decoration">✨</div>
+            </div>
             
-            <h2>About Me</h2>
-            <p>I'm learning web development with ALX.</p>
+            <section class="intro-section">
+                <h2>About This Project</h2>
+                <p>This website showcases my journey learning <span class="highlight">web development</span> with ALX. I'm exploring HTML, CSS, and responsive design principles.</p>
+                
+                <div class="feature-box">
+                    <h3>🚀 What I'm Learning</h3>
+                    <ul>
+                        <li>HTML5 Semantic Elements</li>
+                        <li>CSS Flexbox Layouts</li>
+                        <li>Responsive Web Design</li>
+                        <li>CSS Styling Techniques</li>
+                    </ul>
+                </div>
+            </section>
             
-            <h3>My Interests</h3>
-            <p>Web development, programming, and technology.</p>
+            <section class="content-section">
+                <h2>Web Development Journey</h2>
+                <p>Creating beautiful and functional websites requires understanding both <strong>design principles</strong> and <strong>technical implementation</strong>.</p>
+                
+                <blockquote class="inspirational-quote">
+                    "The web is like a canvas, and CSS is our paintbrush."
+                </blockquote>
+                
+                <div class="image-container">
+                    <a href="https://example.com">
+                        <img src="https://i.ibb.co/gTDZZT8/ALX-Logo-07.png" alt="ALX Logo">
+                    </a>
+                    <p class="image-caption">Click the logo to learn more about ALX</p>
+                </div>
+            </section>
             
-            <a href="https://example.com">
-                <img src="https://i.ibb.co/gTDZZT8/ALX-Logo-07.png" alt="ALX Logo">
-            </a>
+            <section class="tech-stack">
+                <h3>🛠️ Current Tech Stack</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Git</span>
+                </div>
+            </section>
         </article>
         
         <aside>
-            <p>placeholder to add comment thread later</p>
+            <div class="sidebar-widget">
+                <h3>📚 Quick Links</h3>
+                <ul class="sidebar-links">
+                    <li><a href="#html">HTML Basics</a></li>
+                    <li><a href="#css">CSS Fundamentals</a></li>
+                    <li><a href="#flexbox">Flexbox Guide</a></li>
+                    <li><a href="#responsive">Responsive Design</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-widget">
+                <h3>📅 Recent Activity</h3>
+                <div class="activity-item">
+                    <strong>Today:</strong> Added responsive design
+                </div>
+                <div class="activity-item">
+                    <strong>Yesterday:</strong> Implemented flexbox layout
+                </div>
+                <div class="activity-item">
+                    <strong>This Week:</strong> Created base styling
+                </div>
+            </div>
+            
+            <div class="sidebar-widget">
+                <h3>🎯 Progress</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 75%">75%</div>
+                </div>
+                <p>CSS Basics completed</p>
+            </div>
         </aside>
     </main>
     
     <footer>
-        <p>Made by Your Name - <a href="https://example.com" target="_blank">here</a></p>
+        <div class="footer-content">
+            <p>Made with ❤️ by <strong>Abdisatar Yusuf</strong> - 
+            <a href="https://example.com" target="_blank">Visit my portfolio</a></p>
+            <div class="social-links">
+                <span>Connect with me:</span>
+                <a href="#" class="social-link">https://x.com/A_Satar_Yusuf12</a>
+                <a href="#" class="social-link">https://github.com/abdisataryusuf10</a>
+                <a href="#" class="social-link">https://www.linkedin.com/in/abdisatar-yusuf-685460327/</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
