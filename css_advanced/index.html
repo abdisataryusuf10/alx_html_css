@@ -38,6 +38,7 @@
                     <li><a href="#our-results" class="nav-link">our results</a></li>
                     <li><a href="#videos" class="nav-link">videos</a></li>
                     <li><a href="#membership" class="nav-link">membership</a></li>
+                    <li><a href="#faq" class="nav-link">faq</a></li>
                     <li><a href="#contact-us" class="nav-link">contact us</a></li>
                 </ul>
             </nav>
@@ -53,206 +54,233 @@
 
     <!-- Main Content -->
     <main id="main-content">
-        <!-- Hero/Banner Section -->
-        <section class="hero">
-            <img src="images/headphones_hero_1.jpg" alt="Person wearing premium headphones" class="hero-background">
-            
-            <div class="hero-content">
-                <h1 class="hero-title">Lorem ipsum dolor set amet lorem ipsum</h1>
-                <p class="hero-subtitle">Lorem ipsum dolor set amet lorem ipsum dolor set</p>
-                <div class="hero-actions">
-                    <button class="btn btn-primary">Call to action</button>
-                </div>
-                <p class="hero-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-            </div>
-        </section>
+        <!-- Existing sections... -->
 
-        <!-- What We Do Section -->
-        <section id="what-we-do" class="section-padding">
+        <!-- FAQ Section -->
+        <section id="faq" class="faq section-padding">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">What we do...</h2>
-                    <p class="section-subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our Results Section -->
-        <section id="our-results" class="section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Our results speak for themselves</h2>
-                    <p class="section-subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Videos Section -->
-        <section id="videos" class="videos section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Featured Videos</h2>
-                    <p class="section-subtitle">Watch our latest product reviews, tutorials, and customer stories</p>
-                </div>
-                <!-- Videos content -->
-            </div>
-        </section>
-
-        <!-- Membership Section -->
-        <section id="membership" class="membership section-padding">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Choose Your Membership Plan</h2>
-                    <p class="section-subtitle">Get exclusive access to premium content, early product releases, and member-only benefits</p>
+                <div class="faq-header">
+                    <h2 class="faq-title">Frequently Asked Questions</h2>
+                    <p class="faq-subtitle">Find quick answers to common questions about our products, services, and support</p>
                 </div>
 
-                <!-- Membership Toggle -->
-                <div class="membership-toggle">
-                    <span class="toggle-label">Monthly</span>
-                    <label class="toggle-switch">
-                        <input type="checkbox" class="toggle-checkbox">
-                        <span class="toggle-slider"></span>
-                    </label>
-                    <span class="toggle-label">Yearly (Save 20%)</span>
+                <!-- FAQ Search -->
+                <div class="faq-search">
+                    <div class="faq-search-icon">🔍</div>
+                    <input type="text" class="faq-search-input" placeholder="Search questions...">
                 </div>
 
-                <!-- Pricing Grid -->
-                <div class="pricing-grid">
-                    <!-- Basic Plan -->
-                    <div class="pricing-card">
-                        <div class="plan-icon">🎵</div>
-                        <h3 class="plan-name">Basic</h3>
-                        <p class="plan-description">Perfect for casual listeners who want quality sound</p>
-                        
-                        <div class="plan-price">
-                            <div class="price-amount">$9<span class="price-currency">.99</span></div>
-                            <div class="price-period">per month</div>
+                <!-- FAQ Categories -->
+                <div class="faq-categories">
+                    <button class="faq-category-btn active" data-category="all">All Questions</button>
+                    <button class="faq-category-btn" data-category="products">Products</button>
+                    <button class="faq-category-btn" data-category="shipping">Shipping</button>
+                    <button class="faq-category-btn" data-category="returns">Returns</button>
+                    <button class="faq-category-btn" data-category="support">Support</button>
+                </div>
+
+                <!-- FAQ List -->
+                <div class="faq-list">
+                    <!-- Product Questions -->
+                    <div class="faq-item" data-category="products">
+                        <div class="faq-question">
+                            <span>What makes your headphones different from others?</span>
+                            <div class="faq-icon"></div>
                         </div>
-                        
-                        <ul class="plan-features">
-                            <li class="feature-item">
-                                <div class="feature-icon">✓</div>
-                                <span class="feature-text included">Access to basic content library</span>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-icon">✓</div>
-                                <span class="feature-text included">Standard audio quality</span>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-icon">✗</div>
-                                <span class="feature-text excluded">Early product access</span>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-icon">✗</div>
-                                <span class="feature-text excluded">Member-only events</span>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-icon">✗</div>
-                                <span class="feature-text excluded">Priority support</span>
-                            </li>
-                        </ul>
-                        
-                        <button class="plan-button secondary">Get Started</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Our headphones feature advanced noise-cancellation technology, premium materials, and exceptional sound quality that sets them apart. Key differentiators include:</p>
+                                <ul>
+                                    <li>Patented acoustic technology for crystal-clear audio</li>
+                                    <li>Memory foam ear cushions for all-day comfort</li>
+                                    <li>30-hour battery life with quick charging</li>
+                                    <li>Customizable sound profiles via our mobile app</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Pro Plan (Popular) -->
-                    <div class="pricing-card popular">
-                        <div class="popular-badge">Most Popular</div>
-                        <div class="plan-icon">🎧</div>
-                        <h3 class="plan-name">Pro</h3>
-                        <p class="plan-description">Ideal for audio enthusiasts and regular users</p>
-                        
-                        <div class="plan-price">
-                            <div class="price-amount">$19<span class="price-currency">.99</span></div>
-                            <div class="price-period">per month</div>
+                    <div class="faq-item" data-category="products">
+                        <div class="faq-question">
+                            <span>Are the headphones wireless and Bluetooth compatible?</span>
+                            <div class="faq-icon"></div>
                         </div>
-                        
-                        <ul class="plan-features">
-                            <li class="feature-item">
-                                <div class="feature-icon">✓</div>
-                                <span class="feature-text included">Full content library access</span>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-icon">✓</div>
-                                <span class="feature-text included">High-resolution audio</span>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-icon">✓</div>
-                                <span class="feature-text included">Early product access</span>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-icon">✓</div>
-                                <span class="feature-text included">Member-only events</span>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-icon">✗</div>
-                                <span class="feature-text excluded">Priority support</span>
-                            </li>
-                        </ul>
-                        
-                        <button class="plan-button">Get Started</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Yes, all our current models feature Bluetooth 5.2 technology with seamless pairing capabilities. They also include:</p>
+                                <ul>
+                                    <li>Multi-device connectivity (connect to 2 devices simultaneously)</li>
+                                    <li>Low latency mode for gaming and video</li>
+                                    <li>NFC quick pairing on supported devices</li>
+                                    <li>3.5mm audio jack for wired connection option</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Elite Plan -->
-                    <div class="pricing-card">
-                        <div class="plan-icon">🌟</div>
-                        <h3 class="plan-name">Elite</h3>
-                        <p class="plan-description">The ultimate experience for audiophiles and professionals</p>
-                        
-                        <div class="plan-price">
-                            <div class="price-amount">$29<span class="price-currency">.99</span></div>
-                            <div class="price-period">per month</div>
+                    <!-- Shipping Questions -->
+                    <div class="faq-item" data-category="shipping">
+                        <div class="faq-question">
+                            <span>How long does shipping take?</span>
+                            <div class="faq-icon"></div>
                         </div>
-                        
-                        <ul class="plan-features">
-                            <li class="feature-item">
-                                <div class="feature-icon">✓</div>
-                                <span class="feature-text included">Full content library access</span>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-icon">✓</div>
-                                <span class="feature-text included">Lossless audio quality</span>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-icon">✓</div>
-                                <span class="feature-text included">Early product access</span>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-icon">✓</div>
-                                <span class="feature-text included">VIP member events</span>
-                            </li>
-                            <li class="feature-item">
-                                <div class="feature-icon">✓</div>
-                                <span class="feature-text included">24/7 Priority support</span>
-                            </li>
-                        </ul>
-                        
-                        <button class="plan-button secondary">Get Started</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Shipping times vary based on your location and selected shipping method:</p>
+                                <ul>
+                                    <li><strong>Standard Shipping:</strong> 5-7 business days</li>
+                                    <li><strong>Express Shipping:</strong> 2-3 business days</li>
+                                    <li><strong>Overnight Shipping:</strong> Next business day</li>
+                                </ul>
+                                <p>International shipping typically takes 7-14 business days. You'll receive tracking information as soon as your order ships.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="shipping">
+                        <div class="faq-question">
+                            <span>Do you ship internationally?</span>
+                            <div class="faq-icon"></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Yes, we ship to over 50 countries worldwide. International shipping costs and delivery times vary by destination. Additional customs fees or import taxes may apply depending on your country's regulations.</p>
+                                <p>During checkout, you'll see available shipping options and estimated delivery dates for your location.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Returns Questions -->
+                    <div class="faq-item" data-category="returns">
+                        <div class="faq-question">
+                            <span>What is your return policy?</span>
+                            <div class="faq-icon"></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>We offer a 30-day risk-free trial with free returns. If you're not completely satisfied, you can return your headphones for a full refund. Our return policy includes:</p>
+                                <ul>
+                                    <li>30-day return window from delivery date</li>
+                                    <li>Free return shipping label provided</li>
+                                    <li>Full refund processed within 5 business days</li>
+                                    <li>Products must be in original condition with all accessories</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support Questions -->
+                    <div class="faq-item" data-category="support">
+                        <div class="faq-question">
+                            <span>How do I contact customer support?</span>
+                            <div class="faq-icon"></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>Our customer support team is available through multiple channels:</p>
+                                <ul>
+                                    <li><strong>Live Chat:</strong> Available 24/7 on our website</li>
+                                    <li><strong>Email:</strong> support@headphones.com (response within 2 hours)</li>
+                                    <li><strong>Phone:</strong> 1-800-HEADPHONE (Mon-Fri, 9AM-9PM EST)</li>
+                                    <li><strong>Community Forum:</strong> Get help from other users and experts</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Membership Benefits -->
-                <div class="membership-benefits">
-                    <div class="section-header">
-                        <h2 class="section-title">Membership Benefits</h2>
-                        <p class="section-subtitle">What you get with any membership plan</p>
-                    </div>
+                <!-- FAQ Contact CTA -->
+                <div class="faq-cta">
+                    <h3 class="cta-title">Still have questions?</h3>
+                    <p class="cta-description">Our support team is here to help you find the perfect solution</p>
+                    <button class="cta-button">
+                        Contact Support
+                        <span>→</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact-us" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contact us</h2>
+                    <p class="section-subtitle">Get in touch with our team</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // Existing JavaScript...
+
+        // FAQ functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ accordion functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            const faqCategories = document.querySelectorAll('.faq-category-btn');
+            const faqSearch = document.querySelector('.faq-search-input');
+
+            // Toggle FAQ items
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
                     
-                    <div class="benefits-grid">
-                        <div class="benefit-card">
-                            <div class="benefit-icon">🎁</div>
-                            <h3 class="benefit-title">Exclusive Content</h3>
-                            <p class="benefit-description">Access to member-only tutorials
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // FAQ category filtering
+            faqCategories.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active category button
+                    faqCategories.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Filter FAQ items
+                    faqItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // FAQ search functionality
+            faqSearch.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question span').textContent.toLowerCase();
+                    const answer = item.querySelector('.faq-answer-content').textContent.toLowerCase();
+                    
+                    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+
+            // Open first FAQ item by default
+            if (faqItems.length > 0) {
+                faqItems[0].classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
