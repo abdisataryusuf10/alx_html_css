@@ -1,0 +1,266 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Advanced Project - ALX</title>
+    
+    <!-- Meta Information -->
+    <meta name="description" content="Advanced CSS implementation project based on Figma design specifications">
+    <meta name="keywords" content="CSS, HTML, responsive design, Figma, ALX">
+    <meta name="author" content="ALX Student">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar" role="navigation" aria-label="Main navigation">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="#" aria-label="Home page">
+                        <img src="images/logo.png" alt="Company Logo" width="120" height="40">
+                    </a>
+                </div>
+
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="#home" role="menuitem" class="nav-link">Home</a></li>
+                    <li role="none"><a href="#about" role="menuitem" class="nav-link">About</a></li>
+                    <li role="none"><a href="#services" role="menuitem" class="nav-link">Services</a></li>
+                    <li role="none"><a href="#portfolio" role="menuitem" class="nav-link">Portfolio</a></li>
+                    <li role="none"><a href="#contact" role="menuitem" class="nav-link">Contact</a></li>
+                </ul>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-title" class="hero-title">Advanced CSS Implementation</h1>
+                    <p class="hero-subtitle">Transforming designs into responsive, accessible web experiences</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary">Get Started</button>
+                        <button class="btn btn-secondary">Learn More</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="images/hero-image.jpg" alt="CSS Advanced Design Illustration" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding" aria-labelledby="about-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="about-title" class="section-title">About This Project</h2>
+                    <p class="section-subtitle">Mastering advanced CSS techniques and responsive design principles</p>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-item">
+                        <div class="about-icon">🎨</div>
+                        <h3 class="about-item-title">Design Fidelity</h3>
+                        <p class="about-item-description">Precise implementation of Figma designs with pixel-perfect accuracy</p>
+                    </div>
+                    
+                    <div class="about-item">
+                        <div class="about-icon">📱</div>
+                        <h3 class="about-item-title">Responsive Design</h3>
+                        <p class="about-item-description">Fluid layouts that adapt seamlessly across all device sizes</p>
+                    </div>
+                    
+                    <div class="about-item">
+                        <div class="about-icon">⚡</div>
+                        <h3 class="about-item-title">Performance</h3>
+                        <p class="about-item-description">Optimized CSS and assets for fast loading and smooth interactions</p>
+                    </div>
+                    
+                    <div class="about-item">
+                        <div class="about-icon">🔍</div>
+                        <h3 class="about-item-title">Accessibility</h3>
+                        <p class="about-item-description">WCAG compliant with proper semantic HTML and ARIA labels</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section-padding" aria-labelledby="services-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="services-title" class="section-title">Our Services</h2>
+                    <p class="section-subtitle">Comprehensive web development and design solutions</p>
+                </div>
+                
+                <div class="services-grid">
+                    <article class="service-card">
+                        <img src="images/service-1.jpg" alt="Web Design Service" class="service-image">
+                        <div class="service-content">
+                            <h3 class="service-title">Web Design</h3>
+                            <p class="service-description">Creating visually stunning and user-friendly website designs</p>
+                            <a href="#" class="service-link">Learn more →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="service-card">
+                        <img src="images/service-2.jpg" alt="Development Service" class="service-image">
+                        <div class="service-content">
+                            <h3 class="service-title">Development</h3>
+                            <p class="service-description">Building robust and scalable web applications</p>
+                            <a href="#" class="service-link">Learn more →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="service-card">
+                        <img src="images/service-3.jpg" alt="SEO Optimization Service" class="service-image">
+                        <div class="service-content">
+                            <h3 class="service-title">SEO Optimization</h3>
+                            <p class="service-description">Improving search engine rankings and online visibility</p>
+                            <a href="#" class="service-link">Learn more →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio section-padding" aria-labelledby="portfolio-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="portfolio-title" class="section-title">Featured Work</h2>
+                    <p class="section-subtitle">Showcasing our latest projects and achievements</p>
+                </div>
+                
+                <div class="portfolio-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Design</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                    <button class="filter-btn" data-filter="branding">Branding</button>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <!-- Portfolio items will be dynamically loaded -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2 id="contact-title" class="section-title">Get In Touch</h2>
+                        <p class="contact-description">Ready to start your next project? Contact us today!</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <span>satexza12@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📞</span>
+                                <span>+251912110338</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📍</span>
+                                <span>123 Design Street, Creative City</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" aria-labelledby="contact-title">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logo.png" alt="Company Logo" class="footer-logo" width="100" height="30">
+                    <p class="footer-description">Creating exceptional digital experiences through advanced CSS and modern web technologies.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="https://web.facebook.com/abdisetar.shyussuf/">📘</a>
+                        <a href="#" aria-label="https://x.com/A_Satar_Yusuf12">🐦</a>
+                        <a href="#" aria-label="https://www.linkedin.com/in/abdisatar-yusuf-685460327/">💼</a>
+                        <a href="#" aria-label="https://www.instagram.com/the_beast105/">📷</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 CSS Advanced Project. All rights reserved. | ALX HTML/CSS Curriculum</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
+</body>
+
+
+</html>
+
