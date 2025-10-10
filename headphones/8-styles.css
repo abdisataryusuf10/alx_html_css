@@ -1,0 +1,217 @@
+/* ===== HAMBURGER MENU STYLES ===== */
+
+/* Navigation Base Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.nav-logo img {
+    height: 32px;
+    width: auto;
+}
+
+/* Desktop Navigation */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hamburger Menu (Hidden by default) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1000;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: var(--color-white);
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: var(--color-dark-grey);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        transition: right 0.4s ease-in-out;
+        z-index: 999;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        display: block;
+        text-align: center;
+    }
+
+    /* Overlay when menu is open */
+    .nav-menu.active::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+}
+
+/* Hamburger Animation */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+    background: var(--color-primary);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+    background: var(--color-primary);
+}
+
+/* Smooth transitions for bars */
+.bar {
+    transform-origin: center;
+}
+
+/* Menu item animations */
+.nav-item {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.4s ease;
+}
+
+.nav-menu.active .nav-item {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Stagger animation for menu items */
+.nav-menu.active .nav-item:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.nav-menu.active .nav-item:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.nav-menu.active .nav-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+/* Body lock when menu is open */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Close button alternative (optional) */
+.menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--color-white);
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .menu-close {
+        display: block;
+    }
+}
+
+/* Enhanced hover effects for mobile */
+@media (max-width: 480px) {
+    .nav-link {
+        transition: all 0.3s ease;
+        border-radius: 5px;
+    }
+
+    .nav-link:hover {
+        background: rgba(255, 101, 101, 0.1);
+        transform: translateX(-10px);
+    }
+}
+
+/* Tablet responsive (481px - 768px) - keep desktop nav */
+@media (min-width: 481px) and (max-width: 768px) {
+    .nav-menu {
+        gap: 20px;
+    }
+    
+    .nav-link {
+        font-size: 0.7rem;
+    }
+}
+
+/* Ensure header has proper z-index */
+.header {
+    position: relative;
+    z-index: 1000;
+}
