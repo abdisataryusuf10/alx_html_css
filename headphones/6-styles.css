@@ -1,0 +1,217 @@
+/* Our results section */
+.our-results {
+    padding: 100px 0;
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.our-results .section-title {
+    color: var(--color-white);
+}
+
+.our-results .section-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Results grid */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.result-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Pentagon container */
+.pentagon-container {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    margin-bottom: 30px;
+}
+
+/* Pentagon background (outer shape) */
+.pentagon-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Pentagon foreground (inner shape) */
+.pentagon-foreground {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    background: var(--color-white);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Hover effects */
+.pentagon-container:hover .pentagon-background {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.pentagon-container:hover .pentagon-foreground {
+    background: #f8f8f8;
+}
+
+/* Result content */
+.result-value {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.result-label {
+    font-size: 0.9rem;
+    color: var(--color-dark-grey);
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Alternative Pentagon Method using Transform */
+.pentagon-alternative {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    background: var(--color-primary);
+    margin: 0 auto 30px;
+}
+
+.pentagon-alternative:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--color-primary);
+    transform: rotate(36deg) skewX(-18deg);
+}
+
+.pentagon-alternative .pentagon-inner {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background: var(--color-white);
+    transform: rotate(36deg) skewX(-18deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .our-results {
+        padding: 60px 20px;
+    }
+    
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    .pentagon-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .pentagon-foreground {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .result-value {
+        font-size: 2rem;
+    }
+    
+    .result-label {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .pentagon-container {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .pentagon-foreground {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .result-value {
+        font-size: 1.75rem;
+    }
+    
+    .result-label {
+        font-size: 0.75rem;
+    }
+}
+
+/* Animation for pentagons */
+@keyframes pentagonAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-180deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.pentagon-container {
+    animation: pentagonAppear 0.6s ease-out;
+}
+
+.pentagon-container:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.pentagon-container:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.pentagon-container:nth-child(4) {
+    animation-delay: 0.3s;
+}
