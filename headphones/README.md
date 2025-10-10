@@ -62,7 +62,7 @@ Installation Steps
 
 Clone the Repository
 
-git clone https://github.com/yourusername/alx_html_css.git
+git clone https://github.com/abdisataryusuf10/alx_html_css.git
 cd alx_html_css/headphones
 
 Install Custom Fonts
