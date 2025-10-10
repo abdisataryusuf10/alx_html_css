@@ -1,111 +1,244 @@
-/* What we do section */
-.what-we-do {
-    padding: 100px 0;
-    text-align: center;
-    background-color: var(--color-white);
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.section-header {
-    max-width: 800px;
-    margin: 0 auto 80px;
+/* Shared Background for Nav + Hero */
+.hero-section {
+  background-image: url('./assets/images/headphones_hero_1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 600px;
+  padding: 30px 0 80px;
+  margin-bottom: 100px;
 }
 
-.section-title {
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--color-black);
-    margin-bottom: 30px;
+/* Navigation Bar */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 80%;
 }
 
-.section-subtitle {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: var(--color-grey);
+.logo img {
+  height: 40px;
+  object-fit: contain;
 }
 
-/* Services grid */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
 }
 
-.service-item {
-    display: flex;
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #FF6565;
+}
+
+/* Hero Content */
+.hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-family: 'Source Sans Pro', serif;
+  font-size: 32px;
+  margin-bottom: 15px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero-content > p:first-of-type {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #FF6565;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 25px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  margin: 30px 0;
+}
+
+.cta-button:hover {
+  opacity: 0.9;
+}
+
+.hero-description {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.85;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+/* Tablet and smaller laptops */
+@media (max-width: 900px) {
+  .nav-container {
+    padding: 0 25px;
+    gap: 20px;
+  }
+
+  .nav-links {
+    gap: 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+}
+
+/* Mobile (phones) */
+@media (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo img {
+    height: 35px;
+  }
+
+  .nav-links {
     flex-direction: column;
     align-items: center;
+    gap: 15px;
+  }
+
+  .hero-section {
+    padding: 20px 0 60px;
+    min-height: 500px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-content > p:first-of-type {
+    font-size: 14px;
+  }
+
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 12px;
+  }
 }
 
-.service-icon {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background-color: var(--color-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-    transition: transform 0.3s ease;
+
+.part-1 {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
-.service-icon:hover {
-    transform: scale(1.1);
+.part-1 > p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 60px;
+  line-height: 1.6;
 }
 
-.service-icon span {
-    font-size: 4rem;
-    color: var(--color-primary);
+/* Container for all icons */
+.part1-icons {
+  display: flex;
+  justify-content: center; /* center all icon blocks as a group */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-.service-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--color-black);
-    margin-bottom: 15px;
+/* Each icon + text block */
+.part1-icons > div {
+  display: flex;
+  flex-direction: column; /* stack image above text */
+  align-items: center;    /* center both image and text horizontally */
+  justify-content: center;/* align vertically if needed */
+  text-align: center;
+  flex: 1 1 200px;
+  max-width: 220px;
 }
 
-.service-description {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: var(--color-grey);
+/* Image styling */
+.part1-icons img {
+  width: auto;
+  height: auto;
+  margin-bottom: 15px;
+  display: block;
 }
 
-/* Icon font styles - You'll need to adjust based on the actual icon font file */
-.holberton_school-icon-ic_sound:before {
-    content: "\\e900"; /* Adjust based on actual icon codes */
+
+
+/* Text under each icon */
+.part1-icons p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 180px;
 }
 
-.holberton_school-icon-ic_video:before {
-    content: "\\e901";
-}
-
-.holberton_school-icon-ic_music:before {
-    content: "\\e902";
-}
-
-.holberton_school-icon-ic_hearing:before {
-    content: "\\e903";
-}
-
-/* Responsive design */
+/* Tablet view: 2 per row */
 @media (max-width: 768px) {
-    .what-we-do {
-        padding: 60px 20px;
-    }
-    
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .service-icon {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .service-icon span {
-        font-size: 3rem;
-    }
+  .part1-icons > div {
+    flex: 1 1 45%;
+  }
+
+  .part1-icons img {
+    width: 70px;
+  }
 }
+
+/* Mobile view: 1 per row */
+@media (max-width: 480px) {
+  .part1-icons > div {
+    flex: 1 1 100%;
+  }
+
+  .part1-icons img {
+    width: 60px;
+  }
+
+  .part-1 > p {
+    font-size: 14px;
+  }
+}
+
+/*Our results section*/
