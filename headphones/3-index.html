@@ -1,32 +1,134 @@
-<!-- Contact us section -->
-<section class="contact-us">
-    <div class="container">
-        <header class="section-header">
-            <h2 class="section-title">Contact us</h2>
-        </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headphones</title>
+    <link rel="stylesheet" href="3-styles.css">
+    <link rel="stylesheet" href="holberton_school-icon.css">
+</head>
+<body>
+    <!-- Header & Hero section -->
+    
+    <!-- What we do section -->
+    
+    <!-- Our results section -->
+    
+    <!-- Contact us section -->
+    <section class="contact-us">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title">Contact us</h2>
+            </header>
+            
+            <form class="contact-form" id="contactForm">
+                <!-- Form fields as shown above -->
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript code from above
+    </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    
+    // Real-time validation
+    nameInput.addEventListener('input', validateName);
+    emailInput.addEventListener('input', validateEmail);
+    messageInput.addEventListener('input', validateMessage);
+    
+    function validateName() {
+        const name = nameInput.value.trim();
+        const errorElement = document.getElementById('nameError');
         
-        <form class="contact-form" id="contactForm">
-            <div class="form-group">
-                <input type="text" id="name" name="name" class="form-input" required>
-                <label for="name" class="form-label">Name</label>
-                <span class="form-error" id="nameError"></span>
-            </div>
+        if (name.length < 2) {
+            showError(nameInput, errorElement, 'Name must be at least 2 characters long');
+            return false;
+        } else {
+            showSuccess(nameInput, errorElement);
+            return true;
+        }
+    }
+    
+    function validateEmail() {
+        const email = emailInput.value.trim();
+        const errorElement = document.getElementById('emailError');
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (!emailRegex.test(email)) {
+            showError(emailInput, errorElement, 'Please enter a valid email address');
+            return false;
+        } else {
+            showSuccess(emailInput, errorElement);
+            return true;
+        }
+    }
+    
+    function validateMessage() {
+        const message = messageInput.value.trim();
+        const errorElement = document.getElementById('messageError');
+        
+        if (message.length < 10) {
+            showError(messageInput, errorElement, 'Message must be at least 10 characters long');
+            return false;
+        } else {
+            showSuccess(messageInput, errorElement);
+            return true;
+        }
+    }
+    
+    function showError(input, errorElement, message) {
+        input.classList.remove('valid');
+        input.classList.add('invalid');
+        errorElement.textContent = message;
+        errorElement.classList.add('show');
+    }
+    
+    function showSuccess(input, errorElement) {
+        input.classList.remove('invalid');
+        input.classList.add('valid');
+        errorElement.classList.remove('show');
+    }
+    
+    // Form submission
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const isNameValid = validateName();
+        const isEmailValid = validateEmail();
+        const isMessageValid = validateMessage();
+        
+        if (isNameValid && isEmailValid && isMessageValid) {
+            // Simulate form submission
+            const submitBtn = form.querySelector('.btn-submit');
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
             
-            <div class="form-group">
-                <input type="email" id="email" name="email" class="form-input" required>
-                <label for="email" class="form-label">Email</label>
-                <span class="form-error" id="emailError"></span>
-            </div>
-            
-            <div class="form-group">
-                <input type="text" id="message" name="message" class="form-input" required>
-                <label for="message" class="form-label">Your message</label>
-                <span class="form-error" id="messageError"></span>
-            </div>
-            
-            <button type="submit" class="btn btn-primary btn-submit">
-                CALL TO ACTION
-            </button>
-        </form>
-    </div>
-</section>
+            setTimeout(() => {
+                // Show success message
+                const successMessage = document.createElement('div');
+                successMessage.className = 'form-success show';
+                successMessage.textContent = 'Thank you! Your message has been sent successfully.';
+                form.appendChild(successMessage);
+                
+                // Reset form
+                form.reset();
+                submitBtn.textContent = 'CALL TO ACTION';
+                submitBtn.disabled = false;
+                
+                // Remove success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 5000);
+            }, 1500);
+        }
+    });
+});
+</script>
+</body>
+</html>
